@@ -1,0 +1,32 @@
+<table class='table'>
+  <tbody>
+    {{#each this.rows}}
+      <tr>
+        <td class='leftCol'>
+          {{#if link}}
+            <a
+              href={{link}}
+              class='link {{#if highlight}}highlight-link{{/if}}'
+            >
+              {{leftCol}}
+            </a>
+          {{else}}
+            {{leftCol}}
+          {{/if}}
+        </td>
+        <td class='rightCol'>
+          {{#if edit}}
+            <input
+              id={{inputID}}
+              value={{rightCol}}
+              class='profile-edit-input'
+              type={{inputType}}
+            />
+          {{else}}
+            {{rightCol}}
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

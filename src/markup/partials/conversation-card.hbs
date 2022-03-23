@@ -1,0 +1,11 @@
+<div class='conversation-card {{#if this.currentConversation}}current-conversation{{/if}}'>
+  <div class='conversation-card__photo'>
+    <img src={{photo}} alt='Фото собеседника.' />
+  </div>
+  <p class='conversation-card__name'>{{name}}</p>
+  <p class='conversation-card__last-messege'>{{message}}</p>
+  <time class='conversation-card__date'>{{time}}</time>
+  {{#if this.counter}}
+    <p class='conversation-card__counter'>{{counter}}</p>
+  {{/if}}
+</div>

@@ -1,0 +1,134 @@
+@import '../base/_colors';
+
+.eins-modal-backdrop {
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+  background: $overlay-color;
+}
+.eins-modal,
+.eins-modal-backdrop {
+  display: none;
+  width: 100%;
+  position: fixed;
+}
+.eins-modal {
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  z-index: 101;
+  padding: 0 1rem;
+}
+.eins-modal,
+.eins-modal-content {
+  box-sizing: border-box;
+}
+.eins-modal-content {
+  width: 100%;
+  max-width: 24rem;
+  margin: 1rem auto;
+  position: relative;
+  background: $bg-color;
+  border: none;
+  padding: 2.2rem;
+  border-radius: 0.5rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.eins-modal-close {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  color: $text-primary;
+  font-size: 1rem;
+  width: 1rem;
+  padding: 0.5rem;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  border: none;
+  border-radius: 0.5rem;
+  box-sizing: content-box;
+}
+.eins-modal-close:hover {
+  color: $text-highlight;
+  border-color: $input-color;
+}
+.eins-modal-close:after {
+  content: '\e900';
+}
+.eins-modal-dark > .eins-modal-content {
+  color: #fff;
+  border-color: #000;
+  background: #262626;
+}
+.eins-modal-dark > .eins-modal-content .eins-modal-close {
+  color: #b5b5b5;
+  border-color: #333;
+}
+.eins-modal-dark > .eins-modal-content .eins-modal-close:hover {
+  color: #f27474;
+  border-color: #404040;
+}
+.eins-modal.eins-modal-lg > .eins-modal-content {
+  max-width: 97.5rem;
+  padding: 2.5rem;
+  border-radius: 0.7rem;
+}
+.eins-modal.eins-modal-lg > .eins-modal-content .eins-modal-close {
+  font-size: 1rem;
+  width: 1rem;
+  padding: 0.5rem;
+}
+.eins-modal.eins-modal-sm > .eins-modal-content {
+  max-width: 25rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.eins-modal.eins-modal-sm > .eins-modal-content .eins-modal-close {
+  font-size: 1rem;
+  width: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.eins-modal.eins-modal-xsm > .eins-modal-content {
+  max-width: 18.75rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.eins-modal.eins-modal-xsm > .eins-modal-content .eins-modal-close {
+  font-size: 1rem;
+  width: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.fill-scrollbar-gap {
+  box-sizing: border-box;
+}
+.eins-modal__header {
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.eins-modal__upload {
+  margin: 2rem 0;
+  font-size: 1rem;
+  color: $brand-color;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

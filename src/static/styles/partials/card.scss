@@ -1,0 +1,61 @@
+@import '../base/_colors.scss';
+@import './button.scss';
+
+.card {
+  width: 22rem;
+  padding: 2rem;
+  box-shadow: 0 0 0.375rem #00000024;
+  border-radius: 0.75rem;
+
+  & .card__header {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  & .signin-link {
+    display: block;
+    text-align: center;
+    color: $brand-color;
+    text-decoration: none;
+    font-size: 0.75rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & button {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  &__input-block {
+    margin-bottom: 1rem;
+
+    & label {
+      font-size: 0.75rem;
+      color: $text-secondary;
+    }
+
+    & input {
+      display: block;
+      width: 100%;
+      margin-top: 0.5rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      font-size: 1rem;
+      line-height: 2rem;
+      color: $text-primary;
+      background-color: $bg-color;
+      border: none;
+      border-bottom: 0.063rem solid #3369f3;
+    }
+
+    & .card__error {
+      font-size: 0.75rem;
+      color: $text-highlight;
+      margin: 0.5rem 0;
+    }
+  }
+}

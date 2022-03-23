@@ -1,0 +1,18 @@
+@import './reseter';
+@import './fonts';
+@import './_colors';
+
+body {
+  color: $text-primary;
+  background-color: $bg-color;
+  height: 100vh;
+
+  & #center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+}

@@ -1,0 +1,77 @@
+@import './partials/table.scss';
+@import './partials/button.scss';
+@import './base/_colors.scss';
+
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  display: block;
+}
+
+.user-name {
+  font-weight: 800;
+  margin-top: 0.625rem;
+}
+
+.profile-actions {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.return-button {
+  position: fixed;
+  left: 0;
+  border-right: 0.063rem solid $input-color;
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    height: 100%;
+  }
+
+  & img {
+    width: 1.75rem;
+    margin: auto 0;
+  }
+}
+
+.photo-container {
+  position: relative;
+
+  &:hover .photo-overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: $overlay-color;
+  border-radius: 50%;
+}
+
+.overlay-text {
+  color: $text-button;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>{{title}}</title>
+  <link href='~/src/static/styles/base/main.scss' rel='stylesheet' />
+  <link href='~/src/static/styles/feedback/modal.scss' rel='stylesheet' />
+  <link href='~/src/static/styles/feedback/popover.scss' rel='stylesheet' />
+  {{#if styles}}
+    <link href='{{styles}}' rel='stylesheet' /></script>
+  {{/if}}
+</head>
+<body>
+  {{{block 'body'}}}
+  {{#if script}}
+    <script src='{{script}}' type='module'></script>
+  {{/if}}
+  <script src="~/src/static/js/eins-modal.min.js"></script>
+</body>
+</html>

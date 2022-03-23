@@ -1,0 +1,59 @@
+---
+title: Регистрация
+styles: ~/src/static/styles/partials/card.scss
+inputs:
+  -
+    label: Почта
+    labelID: email
+    value: pochta@yandex.ru
+    inputType: email
+    required: true
+  -
+    label: Логин
+    labelID: login
+    value: ivanivanov
+    inputType: text
+    required: true
+  -
+    label: Имя
+    labelID: first_name
+    value: Иван
+    inputType: text
+    required: true
+  -
+    label: Фамилия
+    labelID: second_name
+    value: Иванов
+    inputType: text
+    required: true
+  -
+    label: Телефон
+    labelID: phone
+    value: +7(909)9673030
+    inputType: tel
+    required: true
+  -
+    label: Пароль
+    labelID: password
+    value: ivanivanov
+    inputType: password
+    required: true
+  -
+    label: Пароль (ещё раз)
+    labelID: password-check
+    value: ivanivanovvv
+    error: Пароли не совпадаютmessage-input__field
+    inputType: password
+    required: true
+header: Регистрация
+buttonText: Зарегистрироваться
+linkHref: login.hbs
+linkText: Войти
+linkClassName: signin-link
+---
+
+{{#extend 'center'}}
+  {{#content 'content'}}
+    {{> card}}
+  {{/content}}
+{{/extend}}

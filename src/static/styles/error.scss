@@ -1,0 +1,30 @@
+@import './base/_colors.scss';
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.error-page_code {
+  font-weight: 800;
+}
+
+.error-page_text {
+  font-size: 1.25rem;
+}
+
+.error-page_back-link {
+  margin-top: 2rem;
+}
+
+.link__light {
+  text-decoration: none;
+  color: $brand-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

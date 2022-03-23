@@ -1,0 +1,28 @@
+---
+title: Вход
+styles: ~/src/static/styles/partials/card.scss
+inputs:
+  -
+    label: Логин
+    labelID: login
+    value: ivanivanov
+    error: Неверный логин
+    inputType: email
+    required: true
+  -
+    label: Пароль
+    labelID: password
+    inputType: password
+    required: true
+header: Вход
+buttonText: Авторизоваться
+linkHref: signin.hbs
+linkText: Нет аккаунта?
+linkClassName: signin-link
+---
+
+{{#extend 'center'}}
+  {{#content 'content'}}
+    {{> card}}
+  {{/content}}
+{{/extend}}

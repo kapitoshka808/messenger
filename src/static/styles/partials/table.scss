@@ -1,0 +1,53 @@
+@import '../base/_colors.scss';
+
+.table {
+  width: 35%;
+  border-collapse: collapse;
+
+  & tr td {
+    border: 0.063rem solid $input-color;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.625rem;
+  }
+
+  & tr:first-child td {
+    border-top: 0;
+  }
+
+  & tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+.leftCol {
+  color: $text-primary;
+  font-weight: 800;
+}
+
+.rightCol {
+  color: $text-secondary;
+  text-align: end;
+}
+
+.link {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.highlight-link {
+  color: $text-highlight;
+}
+
+.profile-edit-input {
+  border: none;
+  text-align: end;
+  color: $text-secondary;
+  font-size: 1rem;
+  padding: 0 0.625rem;
+  border-radius: 0.312rem;
+}

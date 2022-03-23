@@ -1,0 +1,13 @@
+@import '../base/_colors.scss';
+
+.action-button {
+  width: 17.5rem;
+  height: 2.4rem;
+  padding: 0.625rem;
+  color: $text-button;
+  background-color: $brand-color;
+  border: none;
+  border-radius: 0.312rem;
+  cursor: pointer;
+  font-size: 1rem;
+}

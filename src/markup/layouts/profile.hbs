@@ -1,0 +1,13 @@
+{{#extend 'center'}}
+  {{#content 'content'}}
+    <nav class='return-button'>
+      <a href='index.hbs'>
+        <img
+          src='~/src/static/icons/return.svg'
+          alt='Вернуться к сообщениям.'
+        />
+      </a>
+    </nav>
+    {{{block 'profileOverview'}}}
+  {{/content}}
+{{/extend}}

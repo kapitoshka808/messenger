@@ -1,0 +1,75 @@
+---
+title: Профиль
+styles: ~/src/static/styles/profile.scss
+rows:
+  -
+    leftCol: Почта
+    rightCol: pochta@yandex.ru
+  -
+    leftCol: Логин
+    rightCol: ivanivanov
+  -
+    leftCol: Имя
+    rightCol: Иван
+  -
+    leftCol: Фамилия
+    rightCol: Иванов
+  -
+    leftCol: Имя в чате
+    rightCol: Иван
+  -
+    leftCol: Телефон
+    rightCol: +7(909)9673030
+actions:
+  rows:
+    -
+      leftCol: Изменить данные
+      rightCol: ~
+      link: 'profile-edit.hbs'
+    -
+      leftCol: Изменить пароль
+      rightCol: ~
+      link: 'profile-password.hbs'
+    -
+      leftCol: Выйти
+      rightCol: ~
+      link: 'login.hbs'
+      highlight: true
+userName: Иван
+buttonText: Поменять
+---
+
+{{#extend 'profile'}}
+    {{#content 'profileOverview'}}
+
+      <div class='photo-container' data-modal-id='changePhoto' >
+        <img
+        src='~/src/static/icons/photo-placeholder.svg'
+        alt='Фото пользователя.'
+        class='avatar'
+        />
+        <div class='photo-overlay'>
+          <div class='overlay-text'>Поменять аватар</div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id='changePhoto' class='eins-modal'>
+        <div class='eins-modal-content'>
+          <p class='eins-modal__header'>Загрузите фото</p>
+          <label class="eins-modal__upload">
+            <input type="file"/>
+            Выбрать фото на устройстве
+          </label>
+          <a href='profile-overview.hbs'>
+            {{> button}}
+          </a>
+        </div>
+      </div>
+      <!-- Modal -->
+      <h4 class='user-name'>{{userName}}</h4>
+      {{> table}}
+      <div class='profile-actions'>
+        {{> table actions}}
+      </div>
+    {{/content}}
+{{/extend}}

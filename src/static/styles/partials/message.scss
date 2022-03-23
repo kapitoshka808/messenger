@@ -1,0 +1,34 @@
+@import '../base/_colors.scss';
+
+.message-cloud {
+  background-color: $interlocutor-message;
+  border-radius: 0.75rem 0.75rem 0.75rem 0;
+  max-width: 40%;
+  padding: 0.625rem;
+  margin: 0.625rem auto 0.625rem 0.625rem;
+}
+
+.myMessage {
+  background-color: $my-message;
+  margin: 0.625rem 0.625rem 0.625rem auto;
+  border-radius: 0.75rem 0.75rem 0 0.75rem;
+}
+
+.message-cloud__photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.message-cloud__time {
+  font-size: 0.875rem;
+  color: $text-secondary;
+  display: block;
+  text-align: end;
+}
+
+.messages__date {
+  color: $text-secondary;
+  display: block;
+  text-align: center;
+  margin: 0.625rem;
+}

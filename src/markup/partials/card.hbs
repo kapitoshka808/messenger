@@ -1,0 +1,16 @@
+<div class='card'>
+  <h3 class='card__header'>{{header}}</h3>
+  {{#each inputs}}
+    <div class='card__input-block'>
+      <label for={{this.labelID}}>{{this.label}}</label>
+      <input id={{this.labelID}} type={{this.inputType}} {{#if this.required}}required{{/if}} />
+      <div class='card__error'>{{this.error}}</div>
+    </div>
+  {{/each}}
+  <a href='index.hbs'>
+    {{> button}}
+  </a>
+  <a href={{linkHref}} class={{linkClassName}}>
+    {{linkText}}
+  </a>
+</div>

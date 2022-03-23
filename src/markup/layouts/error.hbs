@@ -1,0 +1,11 @@
+{{#extend 'center'}}
+    {{#content 'content'}}
+        <div class='error-page'>
+            <h1 class='error-page_code'>{{this.errorCode}}</h1>
+            <p class='error-page_text'>{{this.errorText}}</p>
+            <div class='error-page_back-link'>
+                {{> link href='index.hbs' text='Назад к чатам' className='link__light'}}
+            </div>
+        </div>
+    {{/content}}
+{{/extend}}

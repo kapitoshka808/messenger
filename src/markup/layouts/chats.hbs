@@ -1,0 +1,85 @@
+{{#extend 'html'}}
+  {{#content 'body'}}
+    <main class='messages-container'>
+      <section class='messages'>
+        <date class='messages__date'>21 марта</date>
+        {{#each messages}}
+          {{> message this}}
+        {{/each}}
+      </section>
+      <div class='actions'>
+        <div class='actions__avatar'>
+          <img src={{actionsAvatar}} alt='Фото собеседника.' />
+        </div>
+        <p class='actions__name'>{{actionsName}}</p>
+        <div class='popover__wrapper actions__button'>
+          <button class='actions__button'>
+            <img src='~/src/static/icons/dots.svg' alt='Действия.'/>
+          </button>
+          <div class='popover__content popover__content--bottom-left'>
+            <a class='popover__item'>
+              <img
+                src='~/src/static/icons/add.svg'
+                alt='Добавить пользователя.'
+              />
+              <p>Добавить пользователя</p>
+            </a>
+            <a class='popover__item'>
+              <img
+                src='~/src/static/icons/delete.svg'
+                alt='Удалить пользователя.'
+              />
+              <p>Удалить пользователя</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class='settings'>
+        <a href='profile-overview.hbs'>Профиль ></a>
+      </nav>
+      <aside class='conversation-cards'>
+        {{#each chats}}
+          {{> conversation-card this}}
+        {{/each}}
+      </aside>
+      <div class='message-input'>
+        <div class='popover__wrapper'>
+          <button class='message-input__file'>
+            <img
+              src='~/src/static/icons/staple.svg'
+              alt='Прикрепить дополнения.'
+            />
+          </button>
+          <div class='popover__content popover__content--top-right'>
+          <a class='popover__item'>
+            <img
+              src='~/src/static/icons/image.svg'
+              alt='Добавить фото или видео.'
+            />
+            <p>Фото или Видео</p>
+          </a>
+          <a class='popover__item'>
+            <img
+              src='~/src/static/icons/file.svg'
+              alt='Добавить фото или видео.'
+            />
+            <p>Файл</p>
+          </a>
+          <a class='popover__item'>
+            <img
+              src='~/src/static/icons/location.svg'
+              alt='Добавить фото или видео.'
+            />
+            <p>Локация</p>
+          </a>
+        </div>
+      </div>
+      <input class='message-input__field' id='message' placeholder='Сообщение'></input>
+      <button class='message-input__button'>
+        <img src='~/src/static/icons/send.svg' alt='Отправить сообщение.'/>
+      </button>
+      </div>
+      <input class='search-input' placeholder='&#x1F50E;&#xFE0E; Поиск'></input>
+    </main>
+  {{/content}}
+{{/extend}}
